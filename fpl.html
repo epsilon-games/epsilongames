@@ -1,0 +1,37 @@
+---
+layout: main
+title: "Epsilon DL - FPL"
+project_title: "FANTASY PREMIER LEAGUE"
+project_description: "I have played the FPL for over 5 seasons, each decision were more passionate than logical, now I'm changing this, using the power of data."
+---
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="{{ '../assets/css/fpl_masthead.css' | replace: '..', site.url }}" rel="stylesheet" />
+
+<!-- Post List-->
+<section class="projects-description" id="introduction">
+  <h1 align="center">Fantasy Premier League - Posts list</h1>
+  <div class="container_post">
+      <!-- Featured Project Row-->
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+            <p class="text-black-50 mb-0">The Fantasy Premier League (FPL) is a very popular game, our job, as players, is to build a team with Premier League teams players, filling all position, goalkeepers, defense, midfielders and forwards, and even the bench, all with a starting budget of £100, other rules apply as, no more of 3 players from the same team, and we need a specific number of player of each position.</p><br>
+            <p class="text-black-50 mb-0">Previous to each matchweek, we may make a transfer, if we want to make more than one we will suffer a points penalty. We also need to select the formation and which player will play and which will be benched, also the captain (who gets double points).</p><br>
+            <p class="text-black-50 mb-0">Then, with each game the player gets points, based on what they accomplished, like goals, assists, clean sheets, etc. Finally we sum all points our team makes. It’s an easy game, but is really fun and addictive, and of course, there are a lot of things we can use to optimize our score using data.</p><br><br>
+            <p class="text-black-50 mb-0">Recently I discovered the official API of the game, with a lot of very interesting data in real time.</p><br>
+        </div>
+  <div class="container">
+      <!-- Featured Project Row-->
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+              <div class="featured-text text-center text-lg-left">
+                  <ul>
+                    {% for post in site.posts %}
+                      {% if post.project_title == "fpl" %}
+                      <li>
+                        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+                        <p class="text-black-50 mb-0">{{ post.excerpt }}</p>
+                      </li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+              </div>
+        </div>
+</section>

@@ -1,0 +1,36 @@
+---
+layout: main
+title: "Epsilon DL - MTG"
+project_title: "MAGIC THE GATHERING"
+project_description: "One of my favorites cards games since my time at the university, now I'm playing Arena, the digital version of the game."
+---
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="{{ '../assets/css/mtg_masthead.css' | replace: '..', site.url }}" rel="stylesheet" />
+
+<!-- Post List-->
+<section class="projects-description" id="introduction">
+  <h1 align="center">Magic The Gathering - Posts list</h1>
+  <div class="container_post">
+      <!-- Featured Project Row-->
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+            <p class="text-black-50 mb-0">Magic The Gathering is a early 90’ popular trading card game, created by  Richard Garfield, a mathematician professor, it is a really complex game, with a lot of rules and exceptions that invite to exploit card uses and combinations.</p><br>
+            <p class="text-black-50 mb-0">MTG also has a great community of gamers both, casual and pro, and there are really profitable competitive tournaments.</p><br>
+            <p class="text-black-50 mb-0">MTG Arena is the digital version of the game, is free to play and let you play as a normal magic game, also it has competitive games and casual games, as other games modes only found in Arena that take advantage of being a videogame.</p><br>
+        </div>
+  <div class="container">
+      <!-- Featured Project Row-->
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+              <div class="featured-text text-center text-lg-left">
+                  <ul>
+                    {% for post in site.posts %}
+                      {% if post.project_title == "mtg" %}
+                      <li>
+                        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+                        <p class="text-black-50 mb-0">{{ post.excerpt }}</p>
+                      </li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+              </div>
+        </div>
+</section>

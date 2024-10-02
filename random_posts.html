@@ -1,0 +1,30 @@
+---
+layout: main
+title: "Epsilon DL - Random Posts"
+project_title: "Random Posts"
+project_description: "Small ideas that randomly get into my head."
+---
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="{{ '../assets/css/random_masthead.css' | replace: '..', site.url }}" rel="stylesheet" />
+
+<!-- Post List-->
+<section class="projects-description" id="introduction">
+  <h1 align="center">Random Posts - Posts list</h1>
+  <div class="container_post">
+  <div class="container">
+      <!-- Featured Project Row-->
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+              <div class="featured-text text-center text-lg-left">
+                  <ul>
+                    {% for post in site.posts %}
+                      {% if post.project_title == "random" %}
+                      <li>
+                        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+                        <p class="text-black-50 mb-0">{{ post.excerpt }}</p>
+                      </li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+              </div>
+        </div>
+</section>
